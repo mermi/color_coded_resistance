@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Color-Resistance</title>
+<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<script langage="javascript">
+	function init(){
+	window.document.getElementById('car1').style.backgroundColor="#000";
+	window.document.getElementById('car2').style.backgroundColor="#000";
+	window.document.getElementById('car3').style.backgroundColor="#000";
+	window.document.getElementById('car4').style.backgroundColor="#D4AF37";
+	window.document.getElementById('container2').display = "block";
+	window.document.getElementById('tolerance').display = "none";
+	window.document.getElementById('calc').value = "0000";
+}
+	function verif(){
+	if(document.form1.etat[0].checked)
+	{
+		window.document.getElementById('container2').style.display = "block";
+		window.document.getElementById('tolerance').style.display = "none";
+		//d=document.form1.etat[0].value;
+			//alert(d);
+	}
+	else if(document.form1.etat[1].checked)
+	{
+		window.document.getElementById('container2').style.display = "block";
+		window.document.getElementById('tolerance').style.display = "none";
+		//d=document.getElementById('car1')
+		//alert(d);
+	}
+	else if(document.form1.etat[2].checked)
+	{
+		window.document.getElementById('container2').style.display = "block";
+		window.document.getElementById('tolerance').style.display = "none";
+		//d=document.form1.etat[2].value;
+		//alert(d);
+	}
+	else if(document.form1.etat[3].checked)
+	{
+		window.document.getElementById('container2').style.display = "none";
+		window.document.getElementById('tolerance').style.display = "block";
+		//d=document.form1.etat[3].value;
+		//alert(d);
+	}
+}
+	function couleur(name){
+	//alert(name);
+	if(document.form1.etat[0].checked)
+	{
+	window.document.getElementById('car1').style.backgroundColor = name;
+}
+	else if (document.form1.etat[1].checked)
+	{
+		window.document.getElementById('car2').style.backgroundColor = name;
+	}
+	else if (document.form1.etat[2].checked)
+	{
+		window.document.getElementById('car3').style.backgroundColor = name;
+	}
+
+}
+function colorer(col){
+	//alert(col);
+	 window.document.getElementById('car4').style.backgroundColor = col;
+}
+
+
+	function showcalcul(id){
+		//alert(id);
+		var tabCol = new Array("#000","#2A120A","#B40404","#FF8000","#FFFF00","#0B610B","#08088A","#6A0888","#6E6E6E","#fff");
+		var Vcar1=0;
+		var Vcar2=0;
+		var Vcar3=0;
+		var Val1="";
+		var Val2="";
+		var s="";
+		var Nombre=0;
+		var M=0;
+		var Res="";
+		var c="";
+		for(i=0;i<=9;i++)
+		{
+			c=tabCol[i];
+			if(document.getElementById('car1').style.backgroundColor == c){
+				Vcar1=i;
+				//alert(Vcar1);
+				Val1=Vcar1.toString();
+				
+			}
+			if(document.getElementById('car2').style.backgroundColor == c){
+			Vcar2=i;
+			Val2=Vcar2.toString();
+			
+			}
+			if(document.getElementById('car3').style.backgroundColor == c){
+			Vcar3=Math.pow(10,i);
+			alert(Vcar3);
+			}
+			
+		}
+		//alert(Val1);
+		//alert(Val2);
+		s=Val1+Val2
+		alert(s);
+		Nombre=parseInt(s);
+		M=Nombre*Vcar3;
+		Res=M.toString();
+		alert(Res);
+		if(document.getElementById('car4').style.backgroundColor == "#D4AF37")
+		{
+			document.getElementById('toler').value = "10%";
+		}
+		if(document.getElementById('car4').style.backgroundColor == "#6E6E6E")
+		{
+			document.getElementById('toler').value = "5%";
+		}
+
+
+		
+		document.getElementById(id).value = Res;
+}
+
+</script>
+</head>
+<body onload="init()">
+
+<div id="main">
+<div id="tolerance">
+	
+<div id="gold" onclick="colorer('#D4AF37')"></div>
+
+<div id="silver" onclick="colorer('#CECECE')"></div>
+</div>
+<div id="container2" >
+
+<div id="black" onclick="couleur('#000')"></div>
+
+<div id="brown" onclick="couleur('#2A120A')"></div>
+
+<div id="red" onclick="couleur('#B40404')"></div>
+
+<div id="orange" onclick="couleur('#FF8000')" ></div>
+
+<div id="yellow" onclick="couleur('#FFFF00')" ></div>
+
+<div id="green" onclick="couleur('#0B610B')" ></div>
+
+<div id="blue" onclick="couleur('#08088A')" ></div>
+
+<div id="purple" onclick="couleur('#6A0888')"></div>
+
+
+<div id="gray" onclick="couleur('#6E6E6E')" ></div>
+
+<div id="white" onclick="couleur('#fff')" ></div>
+
+</div>
+<div id="resistance">
+	<canvas id="forme" width="300" height="50"></canvas>
+	<script>
+function roundRect(x, y, w, h, radius)
+{
+  var canvas = document.getElementById("forme");
+  var context = canvas.getContext("2d");
+  var r = x + w;
+  var b = y + h;
+  context.beginPath();
+  context.strokeStyle="black";
+  context.fillStyle="#B18904";
+  context.lineWidth="2";
+  context.moveTo(x+radius, y);
+  context.lineTo(r-radius, y);
+  context.quadraticCurveTo(r, y, r, y+radius);
+  context.lineTo(r, y+h-radius);
+  context.quadraticCurveTo(r, b, r-radius, b);
+  context.lineTo(x+radius, b);
+  context.quadraticCurveTo(x, b, x, b-radius);
+  context.lineTo(x, y+radius);
+  context.quadraticCurveTo(x, y, x+radius, y);
+  context.stroke();
+}
+roundRect(5,5,180,40, 15);
+</script>
+		<div id="car1" ></div>
+		<div id="car2"></div>
+		<div id="car3"></div>
+		<div id="car4"></div>
+
+
+<form name="form1">
+	<input type="radio" id="etat" value="car1" name="etat" onclick="verif()"/>
+	<input type="radio" id="etat" value="car2" name="etat" onclick="verif()"/>
+	<input type="radio" id="etat" value="car3" name="etat" onclick="verif()"/>
+	<input type="radio" id="etat" value="car4" name="etat" onclick="verif()"/>
+</form>
+</div>
+<div id="resultat">
+<textarea type="text" name="" id="textresult" disabled>1 k &#937 =1000 &#937 </textarea>
+</div>
+<div id="calcul">
+	<input type="range" size="10" name="calcul" id="calc" onclick="showcalcul('calc')"/>
+	<select id="unite">
+	<option id="unite1">&#937 </option>
+	<option id="unite2">K &#937 </option>
+	</select>
+	&plusmn;<input type="range" size="1" id="toler" value="5%"/>
+
+</div>
+</div>
+
+</body>
+</html>
