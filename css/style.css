@@ -1,0 +1,93 @@
+body{margin:auto; padding:0; text-align:center; background:#faebe1;}
+#menu{
+text-align:center;
+height:auto;
+width:100%;
+display:block;
+overflow:hidden;
+}
+#container1{
+text-align:center;
+width:100%;
+height:200px;
+display:inline;
+border:2px solid #999999;
+float:left;
+/*display:none;*/
+}
+#forme{border-radius:8px !important}
+#calcul{ width:54.6%; height:6%; float:left;}
+#resultat{ width:54.6%; height:60px;  float:left;margin-left: 8px;}
+#information{width:54.6%;height:6%; border:2px solid #999; float:left;}
+#resistance{float:left;width:54.3%; height:100px; padding:2px;margin-left: 8px;}
+#car1 , #car2 , #car3  {border:1px solid black; float:left;height:39px;margin-left:20px;width: 8px;position: relative;
+top:5px;
+left: 280px;
+border-radius:3px;}
+#car4{margin-left:50px;border:1px solid black; float:left;height:39px;width: 8px;position: relative;
+top:5px;
+left:280px;border-radius:3px;}
+
+#etat{margin-left:20px;}
+#container2{
+text-align:center;
+float:left;
+width:66.7%;
+margin-top: 10px;
+margin-left: 8px;
+}
+#calc{font-size:12pt; text-align:center;font-family:Roman;}
+#textresult{font-size:11pt; text-align:center;font-family:Roman;}
+#textresult{height:auto;width:99.4%;}
+#tolerance{text-align:center;border-left:1px solid black; float:left; width:55%; display:none;}
+ #black{background-color:#000;width:8%;height:20px;float:left; border: 1px solid black;}
+ #white{background-color:#fff; width:8%;height:20px;float:left; border: 1px solid black;}
+ #brown{background-color:#2A120A; width:8%;height:20px;float:left;
+border: 1px solid black;}
+ #red{background-color:#B40404; width:8%; height:20px; float:left; border: 1px solid black;}
+ #yellow{background-color:#FFFF00; width:8%; height:20px; float:left; border:1px solid black;}
+ #purple{background-color:#6A0888; width:8%; height:20px; float:left; border: 1px solid black;}
+ #blue{background-color:#08088A; width:8%; height:20px; float:left; border:1px solid black;}
+ #orange{background-color:#FF8000; width:8%; height:20px; float:left; border:1px solid black;}
+ #green{background-color:#0B610B; width:8%; height:20px; float:left; border: 1px solid black;}
+ #gray{background-color:#6E6E6E; width:8%; height:20px; float:left; border: 1px solid black;}
+ #gold{background-color:#D4AF37; width:49.4%; height:20px; float:left;border: 1px solid black;}
+ #silver{background-color:#CECECE; width:50%; height:20px; float:left;border: 1px solid black;}
+
+@media screen and (max-width:480px){
+	#main{
+	height:auto;
+	width:320px;
+	}
+	#resistance{
+	width:84%;
+	margin-left: 14px;
+	}
+	#textresult{
+	height:33px;
+	width:96.4%;
+	}
+	#resultat{
+	height:40px;
+	width:85%;
+	margin-left: 14px;
+	}
+	#calcul{
+	width:85%;
+	height:27px;
+	margin-left: 14px;
+	}
+	#container2{
+	width:100%;
+	margin-left: 14px;
+  margin-top: 5px;
+  margin-left: 4px;
+	}
+	#car1 , #car2 , #car3  { height:39px;margin-left:14px;width: 8px;top:-49px;left:53px;}
+	#car4{margin-left:11px;top:-49px;left:53px;}
+	#forme{margin-left:41px;}
+	#forme1{text-align:left;}
+	#gold{width:49.6%;}
+	#silver{width:49%;}
+	#tolerance{width:94%;}
+}
