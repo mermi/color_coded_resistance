@@ -1,0 +1,11 @@
+#car1 , #car2 , #car3 , #car4 {border:1px solid black; float:left;height:39px;margin-left:20px;width: 8px;position: relative;
+top:5px;
+left: 280px;
+border-radius:3px;}
+#car4{margin-left:50px;border:1px solid black; float:left;height:39px;width: 8px;position: relative;
+top:5px;
+left:280px;border-radius:3px;}
+@media screen and (max-width:480px){
+#car1 , #car2 , #car3 , #car4 { height:39px;margin-left:14px;width: 8px;top:-49px;left:53px;}
+	#car5{margin-left:11px;top:-49px;left:53px;}
+}

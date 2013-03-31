@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
 <head>
-<title>Color-Resistance</title>
+<title>5 Anneaux </title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/style5.css">
 <link rel="stylesheet" type="text/css" href="css/headers.css">
 <link rel="stylesheet" href="css/toolbars.css">
 <meta charset="utf-8">
 <style type="text/css">
-      html, body {
+       html, body {
       margin: 0;
       padding: 0;
       font-size: 10px;
@@ -44,14 +44,14 @@
     [role="toolbar"] .pack-icon-delete {
       background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo4NDA1RDQxQUE3MjA2ODExODhDNkE3NjAxQjM4MUZDNSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpDOUMyRkJBM0REODYxMUUxQjVDNEE4QjczREVCRENENCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpDOUMyRkJBMkREODYxMUUxQjVDNEE4QjczREVCRENENCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjk4MjBGQzc5QjkyMDY4MTE4OEM2QjcwQTAwNDE1NjQ1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjg0MDVENDFBQTcyMDY4MTE4OEM2QTc2MDFCMzgxRkM1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+PB4wWgAAANFJREFUeNpi/P//P8NAAsZRBww1B7ACsSMQuwCxJhBzAPEPIL4OxHuAeD8Q/6amA2SB2AyImaB8OSDuAeIdQHwASZ0HEDsAcQkQP4KK/QPiU0D8GK8LQA7AgQOA+Od/ygBIvx8eO/CGwB0gVqZCNIPMUSUnCt5RMa0JDdlcsBuJ7YrGJ1bMlRIHIEsyovGJFWPEZwETwwCDUQeMOmDUAaMOGHXAkHJAGgViVKkNya7yKQmBkxRafojSEOACYlNoc5xU8BvqgR+jPaNRB+ADAAEGAKG8wdkMfRTuAAAAAElFTkSuQmCC);
     }
-
-  </style>
-<script langage="javascript">
+    </style>
+    <script langage="javascript">
 	function init(){
 	window.document.getElementById('car1').style.backgroundColor="#000";
 	window.document.getElementById('car2').style.backgroundColor="#000";
 	window.document.getElementById('car3').style.backgroundColor="#000";
-	window.document.getElementById('car4').style.backgroundColor="#D4AF37";
+	window.document.getElementById('car4').style.backgroundColor="#000";
+	window.document.getElementById('car5').style.backgroundColor="#D4AF37";
 	window.document.getElementById('container2').display = "block";
 	window.document.getElementById('tolerance').display = "none";
 	window.document.getElementById('calc').value = "0000";
@@ -80,6 +80,13 @@
 	}
 	else if(document.form1.etat[3].checked)
 	{
+		window.document.getElementById('container2').style.display = "block";
+		window.document.getElementById('tolerance').style.display = "none";
+		//d=document.form1.etat[2].value;
+		//alert(d);
+	}
+	else if(document.form1.etat[4].checked)
+	{
 		window.document.getElementById('container2').style.display = "none";
 		window.document.getElementById('tolerance').style.display = "block";
 		//d=document.form1.etat[3].value;
@@ -100,16 +107,20 @@
 	{
 		window.document.getElementById('car3').style.backgroundColor = name;
 	}
+	else if (document.form1.etat[3].checked)
+	{
+		window.document.getElementById('car4').style.backgroundColor = name;
+	}
 
 }
 function colorer(col){
 	//alert(col);
-	 window.document.getElementById('car4').style.backgroundColor = col;
-	 if(document.getElementById('car4').style.backgroundColor == '#D4AF37')
+	 window.document.getElementById('car5').style.backgroundColor = col;
+	 if(document.getElementById('car5').style.backgroundColor == '#D4AF37')
 		{
 			document.getElementById('toler').selectedIndex=0;
 		}
-		if(document.getElementById('car4').style.backgroundColor == '#CECECE')
+		if(document.getElementById('car5').style.backgroundColor == '#CECECE')
 		{
 			document.getElementById('toler').selectedIndex=1;
 		}
@@ -120,7 +131,7 @@ function colorer(col){
 		alert(c);
 		var l= c.length;
 		var tabCol = new Array("#000","#2A120A","#B40404","#FF8000","#FFFF00","#0B610B","#08088A","#6A0888","#6E6E6E","#fff");
-		if(l<=3){
+		if(l<=4){
 			var elem1=c.substring(0,1);
 			var Celem1=parseInt(elem1);
 			//alert(Celem1);
@@ -151,6 +162,16 @@ function colorer(col){
 					//var rgbcol=hex2rgb(tabCol[i]);
 					//alert(rgbcol);
 					document.getElementById('car3').style.backgroundColor=(tabCol[i]);
+				}
+		}
+		var elem4=c.substring(3,4);
+			var Celem4=parseInt(elem4);
+			//alert(Celem3);
+			for(i=0;i<9;i++){
+				if(i==Celem4){
+					//var rgbcol=hex2rgb(tabCol[i]);
+					//alert(rgbcol);
+					document.getElementById('car4').style.backgroundColor=(tabCol[i]);
 				}
 		}
 	}
@@ -185,6 +206,16 @@ function colorer(col){
 					//var rgbcol=hex2rgb(tabCol[i]);
 					//alert(rgbcol);
 					document.getElementById('car3').style.backgroundColor=(tabCol[i]);
+				}
+		}
+			var elem4=c.substring(3,4);
+			var Celem4=parseInt(elem4);
+			//alert(Celem3);
+			for(i=0;i<9;i++){
+				if(i==Celem4){
+					//var rgbcol=hex2rgb(tabCol[i]);
+					//alert(rgbcol);
+					document.getElementById('car4').style.backgroundColor=(tabCol[i]);
 				}
 		}
 		document.getElementById('unite').selectedIndex=1;
@@ -224,6 +255,16 @@ function colorer(col){
 					document.getElementById('car3').style.backgroundColor=(tabCol[i]);
 				}
 		}
+		var elem4=c.substring(3,4);
+			var Celem4=parseInt(elem4);
+			//alert(Celem3);
+			for(i=0;i<9;i++){
+				if(i==Celem4){
+					//var rgbcol=hex2rgb(tabCol[i]);
+					//alert(rgbcol);
+					document.getElementById('car4').style.backgroundColor=(tabCol[i]);
+				}
+		}
 		document.getElementById('unite').selectedIndex=2;
 	}
 
@@ -232,18 +273,17 @@ function colorer(col){
 </script>
 </head>
 <body onload="init()" role="application">
-
-<section role="region" class="skin-dark" >
+	<section role="region" class="skin-dark" >
     <header>
     <a href="home.html"><span class="icon icon-back">back</span></a>
-      <h1>Code Color Resistance <em>(4 anneaux)</em></h1>
+      <h1>Code Color Resistance <em>(5 anneaux)</em></h1>
 
     </header>
     <header>
       <h3>Code To Color</h3>
     </header>
   </section>
-<div id="menu">
+		<div id="menu">
 <div id="tolerance">
 	
 <div id="gold" onclick="colorer('#D4AF37')"></div>
@@ -275,7 +315,7 @@ function colorer(col){
 
 </div>
 <div id="resistance">
-	<canvas id="forme" width="300" height="50"></canvas>
+	<canvas id="forme" width="350" height="52"></canvas>
 	<script>
 function roundRect(x, y, w, h, radius)
 {
@@ -304,6 +344,7 @@ roundRect(5,5,180,40, 15);
 		<div id="car2"></div>
 		<div id="car3"></div>
 		<div id="car4"></div>
+		<div id="car5"></div>
 
 
 <form name="form1" id="forme1">
@@ -311,6 +352,7 @@ roundRect(5,5,180,40, 15);
 	<input type="radio" id="etat" value="car2" name="etat" onclick="verif()"/>
 	<input type="radio" id="etat" value="car3" name="etat" onclick="verif()"/>
 	<input type="radio" id="etat" value="car4" name="etat" onclick="verif()"/>
+	<input type="radio" id="etat" value="car5" name="etat" onclick="verif()"/>
 </form>
 </div>
 <div id="resultat">
@@ -334,7 +376,7 @@ roundRect(5,5,180,40, 15);
       <li><button class="pack-icon-delete">Delete</button></li>
     </ul>
     <ul>
-      <a href="index.html"><li style="margin-top: 11px;font-size: 17px;color: white;">Color To Code</li></a>
+      <a href="index5.html"><li style="margin-top: 11px;font-size: 17px;color: white;">Color To Code</li></a>
       <li><button class="pack-icon-reply">Send</button></li>
      
       

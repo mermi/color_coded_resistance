@@ -20,7 +20,7 @@ float:left;
 #resultat{ width:54.6%; height:60px;  float:left;margin-left: 8px;}
 #information{width:54.6%;height:6%; border:2px solid #999; float:left;}
 #resistance{float:left;width:54.3%; height:100px; padding:2px;margin-left: 8px;}
-#car1 , #car2 , #car3  {border:1px solid black; float:left;height:39px;margin-left:20px;width: 8px;position: relative;
+#car1 , #car2 , #car3 , #car5 {border:1px solid black; float:left;height:39px;margin-left:20px;width: 8px;position: relative;
 top:5px;
 left: 280px;
 border-radius:3px;}
@@ -83,7 +83,7 @@ border: 1px solid black;}
   margin-top: 5px;
   margin-left: 4px;
 	}
-	#car1 , #car2 , #car3  { height:39px;margin-left:14px;width: 8px;top:-49px;left:53px;}
+	#car1 , #car2 , #car3 , #car5 { height:39px;margin-left:14px;width: 8px;top:-49px;left:53px;}
 	#car4{margin-left:11px;top:-49px;left:53px;}
 	#forme{margin-left:41px;}
 	#forme1{text-align:left;}

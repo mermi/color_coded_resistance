@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+<title> 6 Anneaux </title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/style6.css">
+</head>
+<body>
+	<div id="menu">
+<div id="tolerance">
+	
+<div id="gold" onclick="colorer('#D4AF37')"></div>
+
+<div id="silver" onclick="colorer('#CECECE')"></div>
+</div>
+<div id="container2" >
+
+<div id="black" onclick="couleur('#000')"></div>
+
+<div id="brown" onclick="couleur('#2A120A')"></div>
+
+<div id="red" onclick="couleur('#B40404')"></div>
+
+<div id="orange" onclick="couleur('#FF8000')" ></div>
+
+<div id="yellow" onclick="couleur('#FFFF00')" ></div>
+
+<div id="green" onclick="couleur('#0B610B')" ></div>
+
+<div id="blue" onclick="couleur('#08088A')" ></div>
+
+<div id="purple" onclick="couleur('#6A0888')"></div>
+
+
+<div id="gray" onclick="couleur('#6E6E6E')" ></div>
+
+<div id="white" onclick="couleur('#fff')" ></div>
+
+</div>
+<div id="resistance">
+	<canvas id="forme" width="350" height="50"></canvas>
+	<script>
+function roundRect(x, y, w, h, radius)
+{
+  var canvas = document.getElementById("forme");
+  var context = canvas.getContext("2d");
+  var r = x + w;
+  var b = y + h;
+  context.beginPath();
+  context.strokeStyle="black";
+  context.fillStyle="#B18904";
+  context.lineWidth="2";
+  context.moveTo(x+radius, y);
+  context.lineTo(r-radius, y);
+  context.quadraticCurveTo(r, y, r, y+radius);
+  context.lineTo(r, y+h-radius);
+  context.quadraticCurveTo(r, b, r-radius, b);
+  context.lineTo(x+radius, b);
+  context.quadraticCurveTo(x, b, x, b-radius);
+  context.lineTo(x, y+radius);
+  context.quadraticCurveTo(x, y, x+radius, y);
+  context.stroke();
+}
+roundRect(5,5,180,40, 15);
+</script>
+		<div id="car1" ></div>
+		<div id="car2"></div>
+		<div id="car3"></div>
+		<div id="car4"></div>
+		<div id="car5"></div>
+
+
+<form name="form1" id="forme1">
+	<input type="radio" id="etat" value="car1" name="etat" onclick="verif()"/>
+	<input type="radio" id="etat" value="car2" name="etat" onclick="verif()"/>
+	<input type="radio" id="etat" value="car3" name="etat" onclick="verif()"/>
+	<input type="radio" id="etat" value="car4" name="etat" onclick="verif()"/>
+	<input type="radio" id="etat" value="car5" name="etat" onclick="verif()"/>
+</form>
+</div>
+<div id="resultat">
+<textarea type="text" name="" id="textresult" disabled>1 k &#937 =1000 &#937 </textarea>
+</div>
+<div id="calcul">
+	<input type="range" size="10" name="calcul" id="calc" onclick="showcalcul('calc')"/>
+	<select id="unite">
+	<option>&#937 </option>
+	<option >K &#937 </option>
+	<option >M &#937 </option>
+	</select>
+	&plusmn;<select  id="toler">
+	<option>5%</option>
+	<option>10%</option>
+	</select>
+</div>
+</div>
+</body>
+</html>

@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html>
 <head>
-<title>Color-Resistance</title>
+<title>5 Anneaux </title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/style5.css">
 <link rel="stylesheet" type="text/css" href="css/headers.css">
-<link rel="stylesheet" href="css/toolbars.css">
 <meta charset="utf-8">
+<link rel="stylesheet" href="css/toolbars.css">
 <style type="text/css">
-      html, body {
+
+html, body {
       margin: 0;
       padding: 0;
       font-size: 10px;
@@ -44,14 +45,14 @@
     [role="toolbar"] .pack-icon-delete {
       background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo4NDA1RDQxQUE3MjA2ODExODhDNkE3NjAxQjM4MUZDNSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpDOUMyRkJBM0REODYxMUUxQjVDNEE4QjczREVCRENENCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpDOUMyRkJBMkREODYxMUUxQjVDNEE4QjczREVCRENENCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjk4MjBGQzc5QjkyMDY4MTE4OEM2QjcwQTAwNDE1NjQ1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjg0MDVENDFBQTcyMDY4MTE4OEM2QTc2MDFCMzgxRkM1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+PB4wWgAAANFJREFUeNpi/P//P8NAAsZRBww1B7ACsSMQuwCxJhBzAPEPIL4OxHuAeD8Q/6amA2SB2AyImaB8OSDuAeIdQHwASZ0HEDsAcQkQP4KK/QPiU0D8GK8LQA7AgQOA+Od/ygBIvx8eO/CGwB0gVqZCNIPMUSUnCt5RMa0JDdlcsBuJ7YrGJ1bMlRIHIEsyovGJFWPEZwETwwCDUQeMOmDUAaMOGHXAkHJAGgViVKkNya7yKQmBkxRafojSEOACYlNoc5xU8BvqgR+jPaNRB+ADAAEGAKG8wdkMfRTuAAAAAElFTkSuQmCC);
     }
-
-  </style>
+</style>
 <script langage="javascript">
 	function init(){
 	window.document.getElementById('car1').style.backgroundColor="#000";
 	window.document.getElementById('car2').style.backgroundColor="#000";
 	window.document.getElementById('car3').style.backgroundColor="#000";
-	window.document.getElementById('car4').style.backgroundColor="#D4AF37";
+	window.document.getElementById('car4').style.backgroundColor="#000"
+	window.document.getElementById('car5').style.backgroundColor="#D4AF37";
 	window.document.getElementById('container2').display = "block";
 	window.document.getElementById('tolerance').display = "none";
 	window.document.getElementById('calc').value = "0000";
@@ -80,6 +81,13 @@
 	}
 	else if(document.form1.etat[3].checked)
 	{
+		window.document.getElementById('container2').style.display = "block";
+		window.document.getElementById('tolerance').style.display = "none";
+		//d=document.form1.etat[3].value;
+		//alert(d);
+	}
+	else if(document.form1.etat[4].checked)
+	{
 		window.document.getElementById('container2').style.display = "none";
 		window.document.getElementById('tolerance').style.display = "block";
 		//d=document.form1.etat[3].value;
@@ -100,150 +108,122 @@
 	{
 		window.document.getElementById('car3').style.backgroundColor = name;
 	}
-
+	else if(document.form1.etat[3].checked){
+		window.document.getElementById('car4').style.backgroundColor= name;
+	}
 }
 function colorer(col){
 	//alert(col);
-	 window.document.getElementById('car4').style.backgroundColor = col;
-	 if(document.getElementById('car4').style.backgroundColor == '#D4AF37')
+	 window.document.getElementById('car5').style.backgroundColor = col;
+	 if(document.getElementById('car5').style.backgroundColor == '#D4AF37')
 		{
-			document.getElementById('toler').selectedIndex=0;
+			document.getElementById('toler').selectedIndex = 0;
 		}
-		if(document.getElementById('car4').style.backgroundColor == '#CECECE')
+		if(document.getElementById('car5').style.backgroundColor == '#CECECE')
 		{
-			document.getElementById('toler').selectedIndex=1;
+			document.getElementById('toler').selectedIndex = 1;
 		}
 }
+function rvb2hex(val){
+if (val.indexOf("rgb") >= 0) {
+var rgb_string = val.slice(val.indexOf('(') + 1,val.indexOf(')'));
+var rgb_val = rgb_string.split(",");
+val = "#";
+var hexChars = "0123456789ABCDEF";
+for (var i = 0; i < 3; i++) {
+var v = rgb_val[i].valueOf();
+val += hexChars.charAt(v/16) + hexChars.charAt(v%16);
+}
+}
+return val;
+}
 
-	function ChangerValeur(idc){
-		var c= document.getElementById('calc').value;
-		alert(c);
-		var l= c.length;
+	function showcalcul(id){
+		//alert(id);
 		var tabCol = new Array("#000","#2A120A","#B40404","#FF8000","#FFFF00","#0B610B","#08088A","#6A0888","#6E6E6E","#fff");
-		if(l<=3){
-			var elem1=c.substring(0,1);
-			var Celem1=parseInt(elem1);
-			//alert(Celem1);
-			for(i=0;i<9;i++){
-				if(i==Celem1){
-					//alert(tabCol[i]);
-					//var rgbcol=hex2rgb(tabCol[i]);
-					//alert(rgbcol);
-					document.getElementById('car1').style.backgroundColor=(tabCol[i]);
-				}
+		var Vcar1=0;
+		var Vcar2=0;
+		var Vcar3=0;
+		var Vcar4=0;
+		var Val1="";
+		var Val2="";
+		var Val4="";
+		var s="";
+		var Nombre=0;
+		var M=0;
+		var Res="";
+		var c="";
+		for(i=0;i<=9;i++)
+		{
+			c=tabCol[i];
+			//alert(c);
+			conv1=rvb2hex(document.getElementById('car1').style.backgroundColor);
+			//alert(conv1);
+			if(conv1 == c){
+				Vcar1=i;
+				//alert(Vcar1);
+				Val1=Vcar1.toString();
+				
 			}
-			var elem2=c.substring(1,2);
-			var Celem2=parseInt(elem2);
-			//alert(Celem2);
-			for(i=0;i<9;i++){
-				if(i==Celem2){
-					//alert(tabCol[i]);
-					//var rgbcol=hex2rgb(tabCol[i]);
-					//alert(rgbcol);
-					document.getElementById('car2').style.backgroundColor=(tabCol[i]);
-				}
+			conv2=rvb2hex(document.getElementById('car2').style.backgroundColor)
+			if(conv2 == c){
+			Vcar2=i;
+			Val2=Vcar2.toString();
+			
 			}
-			var elem3=c.substring(2,3);
-			var Celem3=parseInt(elem3);
-			//alert(Celem3);
-			for(i=0;i<9;i++){
-				if(i==Celem3){
-					//var rgbcol=hex2rgb(tabCol[i]);
-					//alert(rgbcol);
-					document.getElementById('car3').style.backgroundColor=(tabCol[i]);
-				}
+			conv4=rvb2hex(document.getElementById('car4').style.backgroundColor)
+			if(conv4 == c){
+				Vcar4=i;
+			Val4=Vcar4.toString();
+			}
+			conv3=rvb2hex(document.getElementById('car3').style.backgroundColor)
+			if(conv3 == c){
+			Vcar3=Math.pow(10,i);
+			//alert(Vcar3);
+			}
+			
 		}
-	}
-	else if((l>3)&&(l<6)){
-		var elem1=c.substring(0,1);
-			var Celem1=parseInt(elem1);
-			//alert(Celem1);
-			for(i=0;i<9;i++){
-				if(i==Celem1){
-					//alert(tabCol[i]);
-					//var rgbcol=hex2rgb(tabCol[i]);
-					//alert(rgbcol);
-					document.getElementById('car1').style.backgroundColor=(tabCol[i]);
-				}
-			}
-			var elem2=c.substring(1,2);
-			var Celem2=parseInt(elem2);
-			//alert(Celem2);
-			for(i=0;i<9;i++){
-				if(i==Celem2){
-					//alert(tabCol[i]);
-					//var rgbcol=hex2rgb(tabCol[i]);
-					//alert(rgbcol);
-					document.getElementById('car2').style.backgroundColor=(tabCol[i]);
-				}
-			}
-			var elem3=c.substring(2,3);
-			var Celem3=parseInt(elem3);
-			//alert(Celem3);
-			for(i=0;i<9;i++){
-				if(i==Celem3){
-					//var rgbcol=hex2rgb(tabCol[i]);
-					//alert(rgbcol);
-					document.getElementById('car3').style.backgroundColor=(tabCol[i]);
-				}
+		//alert(Val1);
+		//alert(Val2);
+		s=Val1+Val2+Val4
+		//alert(s);
+		Nombre=parseInt(s);
+		M=Nombre*Vcar3;
+		alert(M);
+		Res=M.toString();
+		//alert(Res);
+		if((Res>1000)&&(Res<1000000)){
+			var nb=0;
+			nb=parseInt(Res);
+			nb=nb/1000;
+			Res=nb.toString();
+			document.getElementById('unite').selectedIndex=1;
 		}
-		document.getElementById('unite').selectedIndex=1;
-
-	}
-	else{
-
-		var elem1=c.substring(0,1);
-			var Celem1=parseInt(elem1);
-			//alert(Celem1);
-			for(i=0;i<9;i++){
-				if(i==Celem1){
-					//alert(tabCol[i]);
-					//var rgbcol=hex2rgb(tabCol[i]);
-					//alert(rgbcol);
-					document.getElementById('car1').style.backgroundColor=(tabCol[i]);
-				}
-			}
-			var elem2=c.substring(1,2);
-			var Celem2=parseInt(elem2);
-			//alert(Celem2);
-			for(i=0;i<9;i++){
-				if(i==Celem2){
-					//alert(tabCol[i]);
-					//var rgbcol=hex2rgb(tabCol[i]);
-					//alert(rgbcol);
-					document.getElementById('car2').style.backgroundColor=(tabCol[i]);
-				}
-			}
-			var elem3=c.substring(2,3);
-			var Celem3=parseInt(elem3);
-			//alert(Celem3);
-			for(i=0;i<9;i++){
-				if(i==Celem3){
-					//var rgbcol=hex2rgb(tabCol[i]);
-					//alert(rgbcol);
-					document.getElementById('car3').style.backgroundColor=(tabCol[i]);
-				}
+		if(Res>1000000){
+			var nbr=0;
+			nbr=parseInt(Res);
+			nbr=nbr/1000000;
+			Res=nbr.toString();
+			document.getElementById('unite').selectedIndex=2;
 		}
-		document.getElementById('unite').selectedIndex=2;
-	}
-
-	}
-
+		
+		document.getElementById(id).value = Res;
+				
+}
 </script>
 </head>
 <body onload="init()" role="application">
-
-<section role="region" class="skin-dark" >
+	<section role="region" class="skin-dark" >
     <header>
     <a href="home.html"><span class="icon icon-back">back</span></a>
-      <h1>Code Color Resistance <em>(4 anneaux)</em></h1>
+      <h1>Code Color Resistance<em>(5 anneaux)</em></h1>
 
     </header>
     <header>
-      <h3>Code To Color</h3>
+      <h3>Color To Code</h3>
     </header>
   </section>
-<div id="menu">
+	<div id="menu">
 <div id="tolerance">
 	
 <div id="gold" onclick="colorer('#D4AF37')"></div>
@@ -275,7 +255,7 @@ function colorer(col){
 
 </div>
 <div id="resistance">
-	<canvas id="forme" width="300" height="50"></canvas>
+	<canvas id="forme" width="350" height="50"></canvas>
 	<script>
 function roundRect(x, y, w, h, radius)
 {
@@ -304,6 +284,7 @@ roundRect(5,5,180,40, 15);
 		<div id="car2"></div>
 		<div id="car3"></div>
 		<div id="car4"></div>
+		<div id="car5"></div>
 
 
 <form name="form1" id="forme1">
@@ -311,13 +292,14 @@ roundRect(5,5,180,40, 15);
 	<input type="radio" id="etat" value="car2" name="etat" onclick="verif()"/>
 	<input type="radio" id="etat" value="car3" name="etat" onclick="verif()"/>
 	<input type="radio" id="etat" value="car4" name="etat" onclick="verif()"/>
+	<input type="radio" id="etat" value="car5" name="etat" onclick="verif()"/>
 </form>
 </div>
 <div id="resultat">
 <textarea type="text" name="" id="textresult" disabled>1 k &#937 =1000 &#937 </textarea>
 </div>
 <div id="calcul">
-	<input type="range" size="10" name="calcul" id="calc" onchange="ChangerValeur('calcul')"/>
+	<input type="range" size="10" name="calcul" id="calc" onclick="showcalcul('calc')"/>
 	<select id="unite">
 	<option>&#937 </option>
 	<option >K &#937 </option>
@@ -334,7 +316,7 @@ roundRect(5,5,180,40, 15);
       <li><button class="pack-icon-delete">Delete</button></li>
     </ul>
     <ul>
-      <a href="index.html"><li style="margin-top: 11px;font-size: 17px;color: white;">Color To Code</li></a>
+      <a href="resistance5.html"><li style="margin-top: 11px;font-size: 17px;color: white;">Code To Color</li></a>
       <li><button class="pack-icon-reply">Send</button></li>
      
       
