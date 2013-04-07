@@ -1,0 +1,61 @@
+[1mdiff --git a/style.css b/style.css[m
+[1mdeleted file mode 100644[m
+[1mindex 69e9854..0000000[m
+[1m--- a/style.css[m
+[1m+++ /dev/null[m
+[36m@@ -1,55 +0,0 @@[m
+[31m-body{margin:auto; padding:0; text-align:center;}[m
+[31m-#main{[m
+[31m-text-align:center;[m
+[31m-height:500px;[m
+[31m-width:100%;[m
+[31m-border:2px solid #999;[m
+[31m-display:block;[m
+[31m-overflow:hidden;[m
+[31m-}[m
+[31m-#container1{[m
+[31m-text-align:center;[m
+[31m-width:100%;[m
+[31m-height:200px;[m
+[31m-display:inline;[m
+[31m-border:2px solid #999999;[m
+[31m-float:left;[m
+[31m-/*display:none;*/[m
+[31m-}[m
+[31m-#forme{border-radius:8px !important}[m
+[31m-#calcul{ width:54.6%; height:6%;border:2px solid #999; float:left;}[m
+[31m-#resultat{ width:54.6%; height:50px; border:2px solid #999; float:left;}[m
+[31m-#information{width:54.6%;height:6%; border:2px solid #999; float:left;}[m
+[31m-#resistance{float:left;width:54.3%; height:100px;border:2px solid #000; padding:2px;}[m
+[31m-#car1 , #car2 , #car3  {border:1px solid black; float:left;height:39px;margin-left:20px;width: 8px;position: relative;[m
+[31m-top:5px;[m
+[31m-left: 280px;[m
+[31m-border-radius:3px;}[m
+[31m-#car4{margin-left:50px;border:1px solid black; float:left;height:39px;width: 8px;position: relative;[m
+[31m-top:5px;[m
+[31m-left:280px;border-radius:3px;}[m
+[31m-[m
+[31m-#etat{margin-left:20px;}[m
+[31m-#container2{[m
+[31m-text-align:center;[m
+[31m-float:left;[m
+[31m-width:66.7%;[m
+[31m-}[m
+[31m-#calc{font-size:12pt; text-align:center;font-family:Roman;}[m
+[31m-#textresult{font-size:11pt; text-align:center;font-family:Roman;}[m
+[31m-#textresult{height:auto;width:99.4%;}[m
+[31m-#tolerance{text-align:center;border-left:1px solid black; float:left; width:55%; display:none;}[m
+[31m- #black{background-color:#000;width:8%;height:20px;float:left; border: 1px solid black;}[m
+[31m- #white{background-color:#fff; width:8%;height:20px;float:left; border: 1px solid black;}[m
+[31m- #brown{background-color:#2A120A; width:8%;height:20px;float:left;[m
+[31m-border: 1px solid black;}[m
+[31m- #red{background-color:#B40404; width:8%; height:20px; float:left; border: 1px solid black;}[m
+[31m- #yellow{background-color:#FFFF00; width:8%; height:20px; float:left; border:1px solid black;}[m
+[31m- #purple{background-color:#6A0888; width:8%; height:20px; float:left; border: 1px solid black;}[m
+[31m- #blue{background-color:#08088A; width:8%; height:20px; float:left; border:1px solid black;}[m
+[31m- #orange{background-color:#FF8000; width:8%; height:20px; float:left; border:1px solid black;}[m
+[31m- #green{background-color:#0B610B; width:8%; height:20px; float:left; border: 1px solid black;}[m
+[31m- #gray{background-color:#6E6E6E; width:8%; height:20px; float:left; border: 1px solid black;}[m
+[31m- #gold{background-color:#D4AF37; width:49.4%; height:20px; float:left;border: 1px solid black;}[m
+[31m- #silver{background-color:#CECECE; width:50%; height:20px; float:left;border: 1px solid black;}[m
+[31m-[m

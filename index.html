@@ -118,11 +118,11 @@ function colorer(col){
 	 window.document.getElementById('car4').style.backgroundColor = col;
 	 if(document.getElementById('car4').style.backgroundColor == '#D4AF37')
 		{
-			document.getElementById('toler').selectedIndex = 0;
+			document.getElementById('toler').selectedIndex.value = 0;
 		}
 		if(document.getElementById('car4').style.backgroundColor == '#CECECE')
 		{
-			document.getElementById('toler').selectedIndex = 1;
+			document.getElementById('toler').selectedIndex.value = 1;
 		}
 }
 function rvb2hex(val){
@@ -205,6 +205,15 @@ return val;
 				
 }
 </script>
+<script type="text/javascript">
+var sURL = unescape(window.location.pathname);
+
+function refresh()
+{
+    window.location.href = sURL;
+}
+
+</script>
 </head>
 <body onload="init()" role="application">
 <section role="region" class="skin-dark" >
@@ -252,6 +261,7 @@ return val;
 <div id="resistance">
 	<canvas id="forme" width="300" height="50"></canvas>
 	<script>
+	
 function roundRect(x, y, w, h, radius)
 {
   var canvas = document.getElementById("forme");
@@ -310,7 +320,7 @@ roundRect(5,5,180,40, 15);
     </ul>
     <ul>
       <a href="resistance.html"><li style="margin-top: 11px;font-size: 17px;color: white;">Code To Color</li></a>
-      <li><button class="pack-icon-reply">Send</button></li>
+      <a href="javascript:refresh()"><li><button class="pack-icon-reply">Send</button></li></a>
      
       
     </ul>
