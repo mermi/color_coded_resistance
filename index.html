@@ -4,6 +4,7 @@
 <title>Color-Resistance</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/headers.css">
+<link rel="stylesheet" type="text/css" href="css/switches.css">
 <meta charset="utf-8">
 <link rel="stylesheet" href="css/toolbars.css">
   <style>
@@ -113,18 +114,6 @@
 	}
 
 }
-function colorer(col){
-	//alert(col);
-	 window.document.getElementById('car4').style.backgroundColor = col;
-	 if(document.getElementById('car4').style.backgroundColor == '#D4AF37')
-		{
-			document.getElementById('toler').selectedIndex.value = 0;
-		}
-		if(document.getElementById('car4').style.backgroundColor == '#CECECE')
-		{
-			document.getElementById('toler').selectedIndex.value = 1;
-		}
-}
 function rvb2hex(val){
 if (val.indexOf("rgb") >= 0) {
 var rgb_string = val.slice(val.indexOf('(') + 1,val.indexOf(')'));
@@ -138,6 +127,22 @@ val += hexChars.charAt(v/16) + hexChars.charAt(v%16);
 }
 return val;
 }
+function colorer(col){
+	//alert(col);
+	 window.document.getElementById('car4').style.backgroundColor = col;
+	 //alert(document.getElementById('car4').style.backgroundColor);
+	 var c1 = rvb2hex(document.getElementById('car4').style.backgroundColor);
+	 if( c1== '#D4AF37')
+		{
+			document.getElementById('toler').selectedIndex = 0;
+		}
+		var c2=rvb2hex(document.getElementById('car4').style.backgroundColor);
+		if( c2== '#CECECE')
+		{
+			document.getElementById('toler').selectedIndex = 1;
+		}
+}
+
 
 	function showcalcul(id){
 		//alert(id);
@@ -285,17 +290,33 @@ function roundRect(x, y, w, h, radius)
 }
 roundRect(5,5,180,40, 15);
 </script>
-		<div id="car1" ></div>
-		<div id="car2"></div>
-		<div id="car3"></div>
-		<div id="car4"></div>
-
+		
+	<div id="car1" ></div>	
+	<div id="car2"></div>	
+	<div id="car3"></div>	
+	<div id="car4"></div>
 
 <form name="form1" id="forme1">
-	<input type="radio" id="etat" value="car1" name="etat" onclick="verif()"/>
-	<input type="radio" id="etat" value="car2" name="etat" onclick="verif()"/>
-	<input type="radio" id="etat" value="car3" name="etat" onclick="verif()"/>
-	<input type="radio" id="etat" value="car4" name="etat" onclick="verif()"/>
+	<label>
+	
+	<input data-type="switch"  type="checkbox" id="etat" value="car1" name="etat" onclick="verif()" checked>
+	<span></span>
+	</label>
+	<label>
+	
+	<input data-type="switch"  type="checkbox" id="etat" value="car2" name="etat" onclick="verif()">
+	<span></span>
+	</label>
+	<label>
+	
+	<input data-type="switch"  type="checkbox" id="etat" value="car3" name="etat" onclick="verif()">
+	<span></span>
+	</label>
+	<label>
+	
+	<input data-type="switch"  type="checkbox" id="etat" value="car4" name="etat" onclick="verif()">
+	<span></span>
+	</label>
 </form>
 </div>
 <div id="resultat">
@@ -316,10 +337,10 @@ roundRect(5,5,180,40, 15);
 </div>
 <div role="toolbar">
     <ul>
-      <li><button class="pack-icon-delete">Delete</button></li>
+      <a href="resistance.html"><li style="margin-top: 11px;font-size: 17px;color: white;">Code To Color</li></a>
     </ul>
     <ul>
-      <a href="resistance.html"><li style="margin-top: 11px;font-size: 17px;color: white;">Code To Color</li></a>
+      
       <a href="javascript:refresh()"><li><button class="pack-icon-reply">Send</button></li></a>
      
       

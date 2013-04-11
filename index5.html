@@ -4,6 +4,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/style5.css">
 <link rel="stylesheet" type="text/css" href="css/headers.css">
+<link rel="stylesheet" type="text/css" href="css/switches.css">
 <meta charset="utf-8">
 <link rel="stylesheet" href="css/toolbars.css">
 <style type="text/css">
@@ -112,18 +113,6 @@ html, body {
 		window.document.getElementById('car4').style.backgroundColor= name;
 	}
 }
-function colorer(col){
-	//alert(col);
-	 window.document.getElementById('car5').style.backgroundColor = col;
-	 if(document.getElementById('car5').style.backgroundColor == '#D4AF37')
-		{
-			document.getElementById('toler').selectedIndex = 0;
-		}
-		if(document.getElementById('car5').style.backgroundColor == '#CECECE')
-		{
-			document.getElementById('toler').selectedIndex = 1;
-		}
-}
 function rvb2hex(val){
 if (val.indexOf("rgb") >= 0) {
 var rgb_string = val.slice(val.indexOf('(') + 1,val.indexOf(')'));
@@ -136,6 +125,21 @@ val += hexChars.charAt(v/16) + hexChars.charAt(v%16);
 }
 }
 return val;
+}
+function colorer(col){
+	//alert(col);
+	 window.document.getElementById('car4').style.backgroundColor = col;
+	 alert(document.getElementById('car4').style.backgroundColor);
+	 var c1 = rvb2hex(document.getElementById('car4').style.backgroundColor);
+	 if( c1== '#D4AF37')
+		{
+			document.getElementById('toler').selectedIndex = 0;
+		}
+		var c2=rvb2hex(document.getElementById('car4').style.backgroundColor);
+		if( c2== '#CECECE')
+		{
+			document.getElementById('toler').selectedIndex = 1;
+		}
 }
 
 	function showcalcul(id){
@@ -297,11 +301,30 @@ roundRect(5,5,180,40, 15);
 
 
 <form name="form1" id="forme1">
-	<input type="radio" id="etat" value="car1" name="etat" onclick="verif()"/>
-	<input type="radio" id="etat" value="car2" name="etat" onclick="verif()"/>
-	<input type="radio" id="etat" value="car3" name="etat" onclick="verif()"/>
-	<input type="radio" id="etat" value="car4" name="etat" onclick="verif()"/>
-	<input type="radio" id="etat" value="car5" name="etat" onclick="verif()"/>
+	<label>
+	
+	<input data-type="switch"  type="checkbox" id="etat" value="car1" name="etat" onclick="verif()" checked>
+	<span></span>
+	</label>
+	<label>
+	
+	<input data-type="switch"  type="checkbox" id="etat" value="car2" name="etat" onclick="verif()">
+	<span></span>
+	</label>
+	<label>
+	
+	<input data-type="switch"  type="checkbox" id="etat" value="car3" name="etat" onclick="verif()">
+	<span></span>
+	</label>
+	<label>
+	
+	<input data-type="switch"  type="checkbox" id="etat" value="car4" name="etat" onclick="verif()">
+	<span></span>
+	</label>
+	<label>
+	<input data-type="switch"  type="checkbox" id="etat" value="car5" name="etat" onclick="verif()">
+	<span></span>
+	</label>
 </form>
 </div>
 <div id="resultat">

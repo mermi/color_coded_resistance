@@ -4,6 +4,7 @@
 <title>Color-Resistance</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/headers.css">
+<link rel="stylesheet" type="text/css" href="css/switches.css">
 <link rel="stylesheet" href="css/toolbars.css">
 <meta charset="utf-8">
 <style type="text/css">
@@ -316,10 +317,26 @@ roundRect(5,5,180,40, 15);
 
 
 <form name="form1" id="forme1">
-	<input type="radio" id="etat" value="car1" name="etat" onclick="verif()"/>
-	<input type="radio" id="etat" value="car2" name="etat" onclick="verif()"/>
-	<input type="radio" id="etat" value="car3" name="etat" onclick="verif()"/>
-	<input type="radio" id="etat" value="car4" name="etat" onclick="verif()"/>
+	<label>
+	
+	<input data-type="switch"  type="checkbox" id="etat" value="car1" name="etat" onclick="verif()" checked>
+	<span></span>
+	</label>
+	<label>
+	
+	<input data-type="switch"  type="checkbox" id="etat" value="car2" name="etat" onclick="verif()">
+	<span></span>
+	</label>
+	<label>
+	
+	<input data-type="switch"  type="checkbox" id="etat" value="car3" name="etat" onclick="verif()">
+	<span></span>
+	</label>
+	<label>
+	
+	<input data-type="switch"  type="checkbox" id="etat" value="car4" name="etat" onclick="verif()">
+	<span></span>
+	</label>
 </form>
 </div>
 <div id="resultat">

@@ -15,7 +15,8 @@ border:2px solid #999999;
 float:left;
 /*display:none;*/
 }
-#forme{border-radius:8px !important}
+#forme{border-radius:8px !important;
+margin-left: -45px;}
 #calcul{ width:54.6%; height:6%; float:left;}
 #resultat{ width:54.6%; height:60px;  float:left;margin-left: 8px;}
 #information{width:54.6%;height:6%; border:2px solid #999; float:left;}
@@ -28,7 +29,7 @@ border-radius:3px;}
 top:5px;
 left:280px;border-radius:3px;}
 
-#etat{margin-left:20px;}
+/*#etat{margin-left:20px;}*/
 #container2{
 text-align:center;
 float:left;
@@ -83,11 +84,16 @@ border: 1px solid black;}
   margin-top: 5px;
   margin-left: 4px;
 	}
-	#car1 , #car2 , #car3 , #car5 { height:39px;margin-left:14px;width: 8px;top:-49px;left:53px;}
+	#car1 , #car2 , #car3 , #car5 { height:39px;margin-left:29px;width: 8px;top:-49px;left:53px;}
 	#car4{margin-left:11px;top:-49px;left:53px;}
 	#forme{margin-left:41px;}
 	#forme1{text-align:left;}
 	#gold{width:49.6%;}
 	#silver{width:49%;}
 	#tolerance{width:94%;}
+	/*#etat{
+		  margin-left: 40px;
+    margin-right: -86px;
+	}*/
+	
 }
