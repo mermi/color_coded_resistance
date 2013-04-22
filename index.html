@@ -72,65 +72,69 @@
     }
   </style>
 <script langage="javascript">
-	function init(){
-	window.document.getElementById('car1').style.backgroundColor="#000";
-	window.document.getElementById('car2').style.backgroundColor="#000";
-	window.document.getElementById('car3').style.backgroundColor="#000";
-	window.document.getElementById('car4').style.backgroundColor="#D4AF37";
-	window.document.getElementById('container2').display = "block";
-	window.document.getElementById('tolerance').display = "none";
-	window.document.getElementById('calc').value = "0000";
-}
-	function verif(){
-	if(document.form1.etat[0].checked)
+	function init()
 	{
-		window.document.getElementById('container2').style.display = "block";
-		window.document.getElementById('tolerance').style.display = "none";
-		//d=document.form1.etat[0].value;
+		window.document.getElementById('car1').style.backgroundColor="#000";
+		window.document.getElementById('car2').style.backgroundColor="#000";
+		window.document.getElementById('car3').style.backgroundColor="#000";
+		window.document.getElementById('car4').style.backgroundColor="#D4AF37";
+		window.document.getElementById('container2').display = "block";
+		window.document.getElementById('tolerance').display = "none";
+		window.document.getElementById('calc').value = "0000";
+	}
+	function verif()
+	{
+		if(document.form1.etat[0].checked)
+		{
+			window.document.getElementById('container2').style.display = "block";
+			window.document.getElementById('tolerance').style.display = "none";
+			//d=document.form1.etat[0].value;
 			//alert(d);
+		}
+		else if(document.form1.etat[1].checked)
+		{
+			window.document.getElementById('container2').style.display = "block";
+			window.document.getElementById('tolerance').style.display = "none";
+			//d=document.getElementById('car1')
+			//alert(d);
+		}
+		else if(document.form1.etat[2].checked)
+		{
+			window.document.getElementById('container2').style.display = "block";
+			window.document.getElementById('tolerance').style.display = "none";
+			//d=document.form1.etat[2].value;
+			//alert(d);
+		}
+		else if(document.form1.etat[3].checked)
+		{
+			window.document.getElementById('container2').style.display = "none";
+			window.document.getElementById('tolerance').style.display = "block";
+			//d=document.form1.etat[3].value;
+			//alert(d);
+		}
 	}
-	else if(document.form1.etat[1].checked)
+	function couleur(name)
 	{
-		window.document.getElementById('container2').style.display = "block";
-		window.document.getElementById('tolerance').style.display = "none";
-		//d=document.getElementById('car1')
-		//alert(d);
-	}
-	else if(document.form1.etat[2].checked)
-	{
-		window.document.getElementById('container2').style.display = "block";
-		window.document.getElementById('tolerance').style.display = "none";
-		//d=document.form1.etat[2].value;
-		//alert(d);
-	}
-	else if(document.form1.etat[3].checked)
-	{
-		window.document.getElementById('container2').style.display = "none";
-		window.document.getElementById('tolerance').style.display = "block";
-		//d=document.form1.etat[3].value;
-		//alert(d);
-	}
-}
-	function couleur(name){
-	//alert(name);
-	if(document.form1.etat[0].checked)
-	{
-	window.document.getElementById('car1').style.backgroundColor = name;
-}
-	else if (document.form1.etat[1].checked)
-	{
-		window.document.getElementById('car2').style.backgroundColor = name;
-	}
-	else if (document.form1.etat[2].checked)
-	{
-		window.document.getElementById('car3').style.backgroundColor = name;
-	}
+		//alert(name);
+		if(document.form1.etat[0].checked)
+		{
+			window.document.getElementById('car1').style.backgroundColor = name;
+		}
+		else if (document.form1.etat[1].checked)
+		{
+			window.document.getElementById('car2').style.backgroundColor = name;
+		}
+		else if (document.form1.etat[2].checked)
+		{
+			window.document.getElementById('car3').style.backgroundColor = name;
+		}	
 
-}
-function colorer(col){
-	//alert(col);
-	 window.document.getElementById('car4').style.backgroundColor = col;
-	 if(document.getElementById('car4').style.backgroundColor == '#D4AF37')
+	}
+	function colorer(col)
+	{
+		//alert(col);
+		 window.document.getElementById('car4').style.backgroundColor = col;
+		 if(document.getElementById('car4').style.backgroundColor == '#D4AF37')
 		{
 			document.getElementById('toler').selectedIndex = 0;
 		}
@@ -138,22 +142,26 @@ function colorer(col){
 		{
 			document.getElementById('toler').selectedIndex = 1;
 		}
-}
-function rvb2hex(val){
-if (val.indexOf("rgb") >= 0) {
-var rgb_string = val.slice(val.indexOf('(') + 1,val.indexOf(')'));
-var rgb_val = rgb_string.split(",");
-val = "#";
-var hexChars = "0123456789ABCDEF";
-for (var i = 0; i < 3; i++) {
-var v = rgb_val[i].valueOf();
-val += hexChars.charAt(v/16) + hexChars.charAt(v%16);
-}
-}
-return val;
-}
+	}
+	function rvb2hex(val)
+	{
+		if (val.indexOf("rgb") >= 0) 
+		{
+			var rgb_string = val.slice(val.indexOf('(') + 1,val.indexOf(')'));
+			var rgb_val = rgb_string.split(",");
+			val = "#";
+			var hexChars = "0123456789ABCDEF";
+			for (var i = 0; i < 3; i++) 
+			{
+				var v = rgb_val[i].valueOf();
+				val += hexChars.charAt(v/16) + hexChars.charAt(v%16);
+			}
+		}
+		return val;
+	}
 
-	function showcalcul(id){
+	function showcalcul(id)
+	{
 		//alert(id);
 		var tabCol = new Array("#000","#2A120A","#B40404","#FF8000","#FFFF00","#0B610B","#08088A","#6A0888","#6E6E6E","#fff");
 		var Vcar1=0;
@@ -172,22 +180,25 @@ return val;
 			//alert(c);
 			conv1=rvb2hex(document.getElementById('car1').style.backgroundColor);
 			//alert(conv1);
-			if(conv1 == c){
+			if(conv1 == c)
+			{
 				Vcar1=i;
 				//alert(Vcar1);
 				Val1=Vcar1.toString();
 				
 			}
 			conv2=rvb2hex(document.getElementById('car2').style.backgroundColor)
-			if(conv2 == c){
-			Vcar2=i;
-			Val2=Vcar2.toString();
+			if(conv2 == c)
+			{
+				Vcar2=i;
+				Val2=Vcar2.toString();
 			
 			}
 			conv3=rvb2hex(document.getElementById('car3').style.backgroundColor)
-			if(conv3 == c){
-			Vcar3=Math.pow(10,i);
-			//alert(Vcar3);
+			if(conv3 == c)
+			{
+				Vcar3=Math.pow(10,i);
+				//alert(Vcar3);
 			}
 			
 		}
@@ -200,14 +211,16 @@ return val;
 		alert(M);
 		Res=M.toString();
 		//alert(Res);
-		if((Res>1000)&&(Res<1000000)){
+		if((Res>1000)&&(Res<1000000))
+		{
 			var nb=0;
 			nb=parseInt(Res);
 			nb=nb/1000;
 			Res=nb.toString();
 			document.getElementById('unite').selectedIndex=1;
 		}
-		if(Res>1000000){
+		if(Res>1000000)
+		{
 			var nbr=0;
 			nbr=parseInt(Res);
 			nbr=nbr/1000000;
@@ -217,7 +230,7 @@ return val;
 		
 		document.getElementById(id).value = Res;
 				
-}
+	}
 </script>
 </head>
 <body onload="init()" role="application">
@@ -230,7 +243,7 @@ return val;
     <header>
       <h3>Color To Code</h3>
     </header>
-  </section>
+    </section>
 
 <div id="menu">
 <div id="tolerance">
@@ -267,26 +280,26 @@ return val;
 	<canvas id="forme" width="300" height="50"></canvas>
 	<script>
 function roundRect(x, y, w, h, radius)
-{
-  var canvas = document.getElementById("forme");
-  var context = canvas.getContext("2d");
-  var r = x + w;
-  var b = y + h;
-  context.beginPath();
-  context.strokeStyle="black";
-  context.fillStyle="#B18904";
-  context.lineWidth="2";
-  context.moveTo(x+radius, y);
-  context.lineTo(r-radius, y);
-  context.quadraticCurveTo(r, y, r, y+radius);
-  context.lineTo(r, y+h-radius);
-  context.quadraticCurveTo(r, b, r-radius, b);
-  context.lineTo(x+radius, b);
-  context.quadraticCurveTo(x, b, x, b-radius);
-  context.lineTo(x, y+radius);
-  context.quadraticCurveTo(x, y, x+radius, y);
-  context.stroke();
-}
+	{
+		  var canvas = document.getElementById("forme");
+		  var context = canvas.getContext("2d");
+		  var r = x + w;
+		  var b = y + h;
+		  context.beginPath();
+		  context.strokeStyle="black";
+		  context.fillStyle="#B18904";
+		  context.lineWidth="2";
+		  context.moveTo(x+radius, y);
+		  context.lineTo(r-radius, y);
+		  context.quadraticCurveTo(r, y, r, y+radius);
+		  context.lineTo(r, y+h-radius);
+		  context.quadraticCurveTo(r, b, r-radius, b);
+		  context.lineTo(x+radius, b);
+		  context.quadraticCurveTo(x, b, x, b-radius);
+		  context.lineTo(x, y+radius);
+		  context.quadraticCurveTo(x, y, x+radius, y);
+		  context.stroke();
+	}
 roundRect(5,5,180,40, 15);
 </script>
 		<div id="car1" ></div>
