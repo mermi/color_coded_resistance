@@ -3,12 +3,13 @@
  * ---------------------------------- */
 
 label:not([for])  {
-  display: inline-block;
+  display: block;
   vertical-align: middle;
-  width: 3rem;
-  height: 3rem;
+  width: 21rem;
+  height: 1.3rem;
   position: relative;
   background: none;
+  margin-top: 19px;
 }
 
 label:not([for]) input[type="checkbox"],
@@ -21,25 +22,26 @@ label:not([for]) input[type="radio"] {
 }
 
 label:not([for]) input + span {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin: -1.1rem 0 0 -1.1rem;
-  width: 1.2rem;
-  height: 1.2rem;
-  pointer-events: none;
+  height: 2.2rem;
+    left: 23%;
+    margin: -1.1rem 0 0 -2.1rem;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    width: 7.2rem;
+     font-size: 12pt;
 }
 
 label:not([for]) input[type="checkbox"] + span {
-  background: url(../images/ui/shadow.png) no-repeat center top / 2.2rem auto;
+  background: url(../images/ui/shadow.png) no-repeat right top / 2.2rem auto;
 }
 
 label:not([for]) input[type="radio"] + span {
-  background: url(../images/radio/default.png) no-repeat center top / 2.2rem auto;
+  background: url(../images/radio/default.png) no-repeat right top / 2.2rem auto;
 }
 
 label:not([for]) input:checked + span {
-  background-position: center bottom;
+  background-position: right bottom;
 }
 
 /* 'Dangerous' switches */
@@ -135,4 +137,13 @@ label input[type="checkbox"][data-type="switch"].uninit + span:after {
   label input[type="checkbox"][data-type="switch"] + span {
      margin: -1.1rem 0 0 -7.7rem;
   }
+label:not([for]) input:checked + span {
+  background-position:  bottom !important;
+}
+label:not([for]) input[type="radio"] + span {
+  background: url(../images/radio/default.png) no-repeat center top / 2.2rem auto;
+}
+label:not([for]) input[type="checkbox"] + span {
+  background: url(../images/ui/shadow.png) no-repeat right top / 2.2rem auto;
+}
 }

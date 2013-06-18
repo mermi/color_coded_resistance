@@ -119,6 +119,7 @@ function colorer(col){
 	function ChangerValeur(idc){
 		var c= document.getElementById('calc').value;
 		alert(c);
+		
 		var l= c.length;
 		var tabCol = new Array("#000","#2A120A","#B40404","#FF8000","#FFFF00","#0B610B","#08088A","#6A0888","#6E6E6E","#fff");
 		if(l<=3){
@@ -146,6 +147,11 @@ function colorer(col){
 			}
 			var elem3=c.substring(2,3);
 			var Celem3=parseInt(elem3);
+			if (Celem3==0) {
+				document.getElementById('car3').style.backgroundColor="#2A120A";
+			}
+			else
+			{
 			//alert(Celem3);
 			for(i=0;i<9;i++){
 				if(i==Celem3){
@@ -154,8 +160,9 @@ function colorer(col){
 					document.getElementById('car3').style.backgroundColor=(tabCol[i]);
 				}
 		}
+		}
 	}
-	else if((l>3)&&(l<6)){
+	 if((l>3)&&(l<=6)){
 		var elem1=c.substring(0,1);
 			var Celem1=parseInt(elem1);
 			//alert(Celem1);
@@ -178,20 +185,24 @@ function colorer(col){
 					document.getElementById('car2').style.backgroundColor=(tabCol[i]);
 				}
 			}
-			var elem3=c.substring(2,3);
-			var Celem3=parseInt(elem3);
+			var elem3=c.substring(2,c.length);
+			//var Celem3=parseInt(elem3);
 			//alert(Celem3);
-			for(i=0;i<9;i++){
-				if(i==Celem3){
+			var longeur=elem3.length
+			switch (longeur){
 					//var rgbcol=hex2rgb(tabCol[i]);
 					//alert(rgbcol);
-					document.getElementById('car3').style.backgroundColor=(tabCol[i]);
-				}
+					case 2:document.getElementById('car3').style.backgroundColor=(tabCol[2]);
+					break;
+					case 3:document.getElementById('car3').style.backgroundColor=(tabCol[3]);
+					break;
+					case 4:document.getElementById('car3').style.backgroundColor=(tabCol[4]);
+					break;		
 		}
 		document.getElementById('unite').selectedIndex=1;
 
 	}
-	else{
+	if(l>6){
 
 		var elem1=c.substring(0,1);
 			var Celem1=parseInt(elem1);
@@ -215,15 +226,23 @@ function colorer(col){
 					document.getElementById('car2').style.backgroundColor=(tabCol[i]);
 				}
 			}
-			var elem3=c.substring(2,3);
-			var Celem3=parseInt(elem3);
+			var elem3=c.substring(2,c.length);
+			//var Celem3=parseInt(elem3);
 			//alert(Celem3);
-			for(i=0;i<9;i++){
-				if(i==Celem3){
+			var longeur=elem3.length;
+			switch (longeur){
 					//var rgbcol=hex2rgb(tabCol[i]);
 					//alert(rgbcol);
-					document.getElementById('car3').style.backgroundColor=(tabCol[i]);
-				}
+					case 5:document.getElementById('car3').style.backgroundColor=(tabCol[5]);
+					break;
+					case 6:document.getElementById('car3').style.backgroundColor=(tabCol[6]);
+					break;
+					case 7:document.getElementById('car3').style.backgroundColor=(tabCol[7]);
+					break;	
+					case 8:document.getElementById('car3').style.backgroundColor=(tabCol[8]);
+					break;
+					case 9:document.getElementById('car3').style.backgroundColor=(tabCol[9]);
+					break;			
 		}
 		document.getElementById('unite').selectedIndex=2;
 	}
@@ -246,11 +265,8 @@ function refresh()
 <section role="region" class="skin-dark" >
     <header>
     <a href="home.html"><span class="icon icon-back">back</span></a>
-      <h1>Code Color Resistance <em>(4 anneaux)</em></h1>
+      <h1>4 anneaux</h1>
 
-    </header>
-    <header>
-      <h3>Code To Color</h3>
     </header>
   </section>
 <div id="menu">
@@ -310,34 +326,23 @@ function roundRect(x, y, w, h, radius)
 }
 roundRect(5,5,180,40, 15);
 </script>
-		<div id="car1" ></div>
-		<div id="car2"></div>
-		<div id="car3"></div>
-		<div id="car4"></div>
+	<div height="50px">
+	<div id="car1" >	
+	
+	</div>
+	<div id="car2">	
+	
+	</div>
 
+	<div id="car3">	
+	
+	</div>
 
-<form name="form1" id="forme1">
-	<label>
+	<div id="car4">
+	</div>
+
+	</div>
 	
-	<input data-type="switch"  type="checkbox" id="etat" value="car1" name="etat" onclick="verif()" checked>
-	<span></span>
-	</label>
-	<label>
-	
-	<input data-type="switch"  type="checkbox" id="etat" value="car2" name="etat" onclick="verif()">
-	<span></span>
-	</label>
-	<label>
-	
-	<input data-type="switch"  type="checkbox" id="etat" value="car3" name="etat" onclick="verif()">
-	<span></span>
-	</label>
-	<label>
-	
-	<input data-type="switch"  type="checkbox" id="etat" value="car4" name="etat" onclick="verif()">
-	<span></span>
-	</label>
-</form>
 </div>
 <div id="resultat">
 <textarea type="text" name="" id="textresult" disabled>1 k &#937 =1000 &#937 </textarea>
@@ -357,11 +362,11 @@ roundRect(5,5,180,40, 15);
 </div>
 <div role="toolbar">
     <ul>
-      <li><button class="pack-icon-delete">Delete</button></li>
+      <a href="index.html"><li style="margin-top: 11px;font-size: 17px;color: white;">Color To Code</li></a>
     </ul>
     <ul>
-      <a href="index.html"><li style="margin-top: 11px;font-size: 17px;color: white;">Color To Code</li></a>
-      <a href="javascript:refresh()"<li><button class="pack-icon-reply">Send</button></li></a>
+      
+      <a href="javascript:refresh()"><li><button class="pack-icon-reply">Send</button></li></a>
      
       
     </ul>

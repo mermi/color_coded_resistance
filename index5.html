@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <head>
 <title>5 Anneaux </title>
-<link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/style5.css">
 <link rel="stylesheet" type="text/css" href="css/headers.css">
 <link rel="stylesheet" type="text/css" href="css/switches.css">
@@ -128,14 +127,14 @@ return val;
 }
 function colorer(col){
 	//alert(col);
-	 window.document.getElementById('car4').style.backgroundColor = col;
-	 alert(document.getElementById('car4').style.backgroundColor);
-	 var c1 = rvb2hex(document.getElementById('car4').style.backgroundColor);
+	 window.document.getElementById('car5').style.backgroundColor = col;
+	 //alert(document.getElementById('car4').style.backgroundColor);
+	 var c1 = rvb2hex(document.getElementById('car5').style.backgroundColor);
 	 if( c1== '#D4AF37')
 		{
 			document.getElementById('toler').selectedIndex = 0;
 		}
-		var c2=rvb2hex(document.getElementById('car4').style.backgroundColor);
+		var c2=rvb2hex(document.getElementById('car5').style.backgroundColor);
 		if( c2== '#CECECE')
 		{
 			document.getElementById('toler').selectedIndex = 1;
@@ -193,7 +192,7 @@ function colorer(col){
 		//alert(s);
 		Nombre=parseInt(s);
 		M=Nombre*Vcar3;
-		alert(M);
+		//alert(M);
 		Res=M.toString();
 		//alert(Res);
 		if((Res>1000)&&(Res<1000000)){
@@ -229,12 +228,10 @@ function refresh()
 	<section role="region" class="skin-dark" >
     <header>
     <a href="home.html"><span class="icon icon-back">back</span></a>
-      <h1>Code Color Resistance<em>(5 anneaux)</em></h1>
+      <h1>5 anneaux</h1>
 
     </header>
-    <header>
-      <h3>Color To Code</h3>
-    </header>
+   
   </section>
 	<div id="menu">
 <div id="tolerance">
@@ -293,37 +290,49 @@ function roundRect(x, y, w, h, radius)
 }
 roundRect(5,5,180,40, 15);
 </script>
-		<div id="car1" ></div>
-		<div id="car2"></div>
-		<div id="car3"></div>
-		<div id="car4"></div>
-		<div id="car5"></div>
+	<div height="50px">
+	<div id="car1" >	
+	
+	</div>
+	<div id="car2">	
+	
+	</div>	
+	<div id="car3">	
+	
+	</div>	
+	<div id="car4">
+	</div>
+    <div id="car5">
+	</div>	
+	</div>
+
 
 
 <form name="form1" id="forme1">
-	<label>
+		<label>
 	
-	<input data-type="switch"  type="checkbox" id="etat" value="car1" name="etat" onclick="verif()" checked>
-	<span></span>
+	<input name="example"  type="radio" id="etat" value="car1" onclick="verif()" checked>
+	<span>S1</span>
 	</label>
 	<label>
 	
-	<input data-type="switch"  type="checkbox" id="etat" value="car2" name="etat" onclick="verif()">
-	<span></span>
+	<input name="example" type="radio" id="etat" value="car2"  onclick="verif()">
+	<span>S2</span>
 	</label>
 	<label>
 	
-	<input data-type="switch"  type="checkbox" id="etat" value="car3" name="etat" onclick="verif()">
-	<span></span>
+	<input name="example" type="radio" id="etat" value="car3"  onclick="verif()">
+	<span>S3</span>
 	</label>
 	<label>
 	
-	<input data-type="switch"  type="checkbox" id="etat" value="car4" name="etat" onclick="verif()">
-	<span></span>
+	<input name="example" type="radio" id="etat" value="car4"  onclick="verif()">
+	<span>S4</span>
 	</label>
 	<label>
-	<input data-type="switch"  type="checkbox" id="etat" value="car5" name="etat" onclick="verif()">
-	<span></span>
+	
+	<input name="example" type="radio" id="etat" value="car4"  onclick="verif()">
+	<span>S5</span>
 	</label>
 </form>
 </div>
@@ -345,10 +354,10 @@ roundRect(5,5,180,40, 15);
 </div>
 <div role="toolbar">
     <ul>
-      <li><button class="pack-icon-delete">Delete</button></li>
+      <a href="resistance5.html"><li style="margin-top: 11px;font-size: 17px;color: white;">Code To Color</li></a>
     </ul>
     <ul>
-      <a href="resistance5.html"><li style="margin-top: 11px;font-size: 17px;color: white;">Code To Color</li></a>
+      
       <a href="javascript:refresh()"><li><button class="pack-icon-reply">Send</button></li></a>
      
       

@@ -20,14 +20,14 @@ margin-left: -45px;}
 #calcul{ width:54.6%; height:6%; float:left;}
 #resultat{ width:54.6%; height:60px;  float:left;margin-left: 8px;}
 #information{width:54.6%;height:6%; border:2px solid #999; float:left;}
-#resistance{float:left;width:54.3%; height:100px; padding:2px;margin-left: 8px;}
+#resistance{float:left;width:54.3%; height:100px; padding:2px;margin-left: 8px;margin-top: 56px;}
 #car1 , #car2 , #car3 , #car5 {border:1px solid black; float:left;height:39px;margin-left:20px;width: 8px;position: relative;
-top:5px;
-left: 280px;
+top:-48px;
+left: 209px;
 border-radius:3px;}
 #car4{margin-left:50px;border:1px solid black; float:left;height:39px;width: 8px;position: relative;
-top:5px;
-left:280px;border-radius:3px;}
+top:-48px;
+left:209px;border-radius:3px;}
 
 /*#etat{margin-left:20px;}*/
 #container2{
@@ -54,6 +54,12 @@ border: 1px solid black;}
  #gray{background-color:#6E6E6E; width:8%; height:20px; float:left; border: 1px solid black;}
  #gold{background-color:#D4AF37; width:49.4%; height:20px; float:left;border: 1px solid black;}
  #silver{background-color:#CECECE; width:50%; height:20px; float:left;border: 1px solid black;}
+ #logomain{margin: 0px auto;
+text-align: center;
+z-index: 20;
+height:200px}
+#main{margin-top: auto;
+z-index: 1;}
 
 @media screen and (max-width:480px){
 	#main{
@@ -63,6 +69,7 @@ border: 1px solid black;}
 	#resistance{
 	width:84%;
 	margin-left: 14px;
+	margin-top: 56px;
 	}
 	#textresult{
 	height:33px;
@@ -95,5 +102,6 @@ border: 1px solid black;}
 		  margin-left: 40px;
     margin-right: -86px;
 	}*/
+
 	
 }

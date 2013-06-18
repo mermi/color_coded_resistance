@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <head>
 <title>5 Anneaux </title>
-<link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/style5.css">
 <link rel="stylesheet" type="text/css" href="css/headers.css">
 <link rel="stylesheet" type="text/css" href="css/switches.css">
@@ -114,25 +113,41 @@
 	}
 
 }
+function rvb2hex(val){
+if (val.indexOf("rgb") >= 0) {
+var rgb_string = val.slice(val.indexOf('(') + 1,val.indexOf(')'));
+var rgb_val = rgb_string.split(",");
+val = "#";
+var hexChars = "0123456789ABCDEF";
+for (var i = 0; i < 3; i++) {
+var v = rgb_val[i].valueOf();
+val += hexChars.charAt(v/16) + hexChars.charAt(v%16);
+}
+}
+return val;
+}
 function colorer(col){
 	//alert(col);
 	 window.document.getElementById('car5').style.backgroundColor = col;
-	 if(document.getElementById('car5').style.backgroundColor == '#D4AF37')
+	 //alert(document.getElementById('car4').style.backgroundColor);
+	 var c1 = rvb2hex(document.getElementById('car5').style.backgroundColor);
+	 if( c1== '#D4AF37')
 		{
-			document.getElementById('toler').selectedIndex=0;
+			document.getElementById('toler').selectedIndex = 0;
 		}
-		if(document.getElementById('car5').style.backgroundColor == '#CECECE')
+		var c2=rvb2hex(document.getElementById('car5').style.backgroundColor);
+		if( c2== '#CECECE')
 		{
-			document.getElementById('toler').selectedIndex=1;
+			document.getElementById('toler').selectedIndex = 1;
 		}
 }
 
 	function ChangerValeur(idc){
 		var c= document.getElementById('calc').value;
-		alert(c);
+		//alert(c);
 		var l= c.length;
 		var tabCol = new Array("#000","#2A120A","#B40404","#FF8000","#FFFF00","#0B610B","#08088A","#6A0888","#6E6E6E","#fff");
-		if(l<=4){
+		if(l==4){
 			var elem1=c.substring(0,1);
 			var Celem1=parseInt(elem1);
 			//alert(Celem1);
@@ -167,16 +182,20 @@ function colorer(col){
 		}
 		var elem4=c.substring(3,4);
 			var Celem4=parseInt(elem4);
+			if (Celem4==0) {
+
+				document.getElementById('car4').style.backgroundColor="#2A120A";
+			}
 			//alert(Celem3);
-			for(i=0;i<9;i++){
-				if(i==Celem4){
+			//for(i=0;i<9;i++){
+				//if(i==Celem4){
 					//var rgbcol=hex2rgb(tabCol[i]);
 					//alert(rgbcol);
-					document.getElementById('car4').style.backgroundColor=(tabCol[i]);
-				}
-		}
+					//document.getElementById('car4').style.backgroundColor=(tabCol[i]);
+				//}
+		//}
 	}
-	else if((l>3)&&(l<6)){
+	if((l>4)&&(l<=6)){
 		var elem1=c.substring(0,1);
 			var Celem1=parseInt(elem1);
 			//alert(Celem1);
@@ -209,22 +228,22 @@ function colorer(col){
 					document.getElementById('car3').style.backgroundColor=(tabCol[i]);
 				}
 		}
-			var elem4=c.substring(3,4);
-			var Celem4=parseInt(elem4);
+			var elem4=c.substring(3,c.length);
+			//var Celem4=parseInt(elem4);
 			//alert(Celem3);
-			for(i=0;i<9;i++){
-				if(i==Celem4){
-					//var rgbcol=hex2rgb(tabCol[i]);
-					//alert(rgbcol);
-					document.getElementById('car4').style.backgroundColor=(tabCol[i]);
-				}
+			var longueur=elem4.length;
+
+			switch (longueur){
+				case 2:document.getElementById('car4').style.backgroundColor=(tabCol[2]);
+				document.getElementById('unite').selectedIndex=1;
+				break;
+				case 3:document.getElementById('car4').style.backgroundColor=(tabCol[3]);
+				document.getElementById('unite').selectedIndex=1;
+				break;
+			}
 		}
-		document.getElementById('unite').selectedIndex=1;
-
-	}
-	else{
-
-		var elem1=c.substring(0,1);
+		if(l>6){
+			var elem1=c.substring(0,1);
 			var Celem1=parseInt(elem1);
 			//alert(Celem1);
 			for(i=0;i<9;i++){
@@ -256,18 +275,34 @@ function colorer(col){
 					document.getElementById('car3').style.backgroundColor=(tabCol[i]);
 				}
 		}
-		var elem4=c.substring(3,4);
-			var Celem4=parseInt(elem4);
+			var elem4=c.substring(3,c.length);
+			//var Celem4=parseInt(elem4);
 			//alert(Celem3);
-			for(i=0;i<9;i++){
-				if(i==Celem4){
-					//var rgbcol=hex2rgb(tabCol[i]);
-					//alert(rgbcol);
-					document.getElementById('car4').style.backgroundColor=(tabCol[i]);
-				}
+			var longueur=elem4.length;
+
+			switch (longueur){
+				case 4:document.getElementById('car4').style.backgroundColor=(tabCol[4]);
+				document.getElementById('unite').selectedIndex=2;
+				break;
+				case 5:document.getElementById('car4').style.backgroundColor=(tabCol[5]);
+				document.getElementById('unite').selectedIndex=2;
+				break;
+				case 6:document.getElementById('car4').style.backgroundColor=(tabCol[6]);
+				document.getElementById('unite').selectedIndex=2;
+				break;
+				case 7:document.getElementById('car4').style.backgroundColor=(tabCol[7]);
+				document.getElementById('unite').selectedIndex=2;
+				break;
+				case 8:document.getElementById('car4').style.backgroundColor=(tabCol[8]);
+				document.getElementById('unite').selectedIndex=2;
+				break;
+				case 9:document.getElementById('car4').style.backgroundColor=(tabCol[9]);
+				document.getElementById('unite').selectedIndex=2;
+				break;
 		}
-		document.getElementById('unite').selectedIndex=2;
-	}
+		
+}
+	
 
 	}
 
@@ -286,12 +321,10 @@ function refresh()
 	<section role="region" class="skin-dark" >
     <header>
     <a href="home.html"><span class="icon icon-back">back</span></a>
-      <h1>Code Color Resistance <em>(5 anneaux)</em></h1>
+      <h1>5 anneaux</h1>
 
     </header>
-    <header>
-      <h3>Code To Color</h3>
-    </header>
+   
   </section>
 		<div id="menu">
 <div id="tolerance">
@@ -350,37 +383,43 @@ function roundRect(x, y, w, h, radius)
 }
 roundRect(5,5,180,40, 15);
 </script>
+<div height="50px">
 		<div id="car1" ></div>
+	
 		<div id="car2"></div>
+		
 		<div id="car3"></div>
+		
 		<div id="car4"></div>
+		
 		<div id="car5"></div>
-
-
+		
+</div>
 <form name="form1" id="forme1">
 	<label>
 	
-	<input data-type="switch"  type="checkbox" id="etat" value="car1" name="etat" onclick="verif()" checked>
-	<span></span>
+	<input name="example"  type="radio" id="etat" value="car1" onclick="verif()" checked>
+	<span>S1</span>
 	</label>
 	<label>
 	
-	<input data-type="switch"  type="checkbox" id="etat" value="car2" name="etat" onclick="verif()">
-	<span></span>
+	<input name="example" type="radio" id="etat" value="car2"  onclick="verif()">
+	<span>S2</span>
 	</label>
 	<label>
 	
-	<input data-type="switch"  type="checkbox" id="etat" value="car3" name="etat" onclick="verif()">
-	<span></span>
+	<input name="example" type="radio" id="etat" value="car3"  onclick="verif()">
+	<span>S3</span>
 	</label>
 	<label>
 	
-	<input data-type="switch"  type="checkbox" id="etat" value="car4" name="etat" onclick="verif()">
-	<span></span>
+	<input name="example" type="radio" id="etat" value="car4"  onclick="verif()">
+	<span>S4</span>
 	</label>
 	<label>
-	<input type="radio" id="etat" value="car5" name="etat" onclick="verif()">
-	<span></span>
+	
+	<input name="example" type="radio" id="etat" value="car4"  onclick="verif()">
+	<span>S5</span>
 	</label>
 </form>
 </div>
@@ -402,10 +441,10 @@ roundRect(5,5,180,40, 15);
 </div>
 <div role="toolbar">
     <ul>
-      <li><button class="pack-icon-delete">Delete</button></li>
+      <a href="index5.html"><li style="margin-top: 11px;font-size: 17px;color: white;">Color To Code</li></a>
     </ul>
     <ul>
-      <a href="index5.html"><li style="margin-top: 11px;font-size: 17px;color: white;">Color To Code</li></a>
+      
       <a href="javascript:refresh()"><li><button class="pack-icon-reply">Send</button></li></a>
      
       

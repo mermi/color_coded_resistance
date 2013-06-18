@@ -2,11 +2,15 @@
 <html>
 <head>
 <title>Color-Resistance</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/headers.css">
 <link rel="stylesheet" type="text/css" href="css/switches.css">
 <meta charset="utf-8">
 <link rel="stylesheet" href="css/toolbars.css">
+
+
   <style>
     html, body {
       margin: 0;
@@ -68,29 +72,31 @@
 	window.document.getElementById('tolerance').display = "none";
 	window.document.getElementById('calc').value = "0000";
 }
-	function verif(){
-	if(document.form1.etat[0].checked)
+	function verif(cel){
+	if(document.getElementById(cel) == car1)
 	{
 		window.document.getElementById('container2').style.display = "block";
 		window.document.getElementById('tolerance').style.display = "none";
 		//d=document.form1.etat[0].value;
 			//alert(d);
 	}
-	else if(document.form1.etat[1].checked)
+	else if(document.getElementById(cel) == car2)
 	{
 		window.document.getElementById('container2').style.display = "block";
 		window.document.getElementById('tolerance').style.display = "none";
 		//d=document.getElementById('car1')
 		//alert(d);
+
 	}
-	else if(document.form1.etat[2].checked)
+	else if(document.getElementById(cel) == car3)
 	{
 		window.document.getElementById('container2').style.display = "block";
 		window.document.getElementById('tolerance').style.display = "none";
 		//d=document.form1.etat[2].value;
 		//alert(d);
+
 	}
-	else if(document.form1.etat[3].checked)
+	else if(document.getElementById(cel) == car4)
 	{
 		window.document.getElementById('container2').style.display = "none";
 		window.document.getElementById('tolerance').style.display = "block";
@@ -100,20 +106,11 @@
 }
 	function couleur(name){
 	//alert(name);
-	if(document.form1.etat[0].checked)
-	{
-	window.document.getElementById('car1').style.backgroundColor = name;
-}
-	else if (document.form1.etat[1].checked)
-	{
-		window.document.getElementById('car2').style.backgroundColor = name;
-	}
-	else if (document.form1.etat[2].checked)
-	{
-		window.document.getElementById('car3').style.backgroundColor = name;
-	}
 
+		window.document.getElementById('car1').style.backgroundColor = name;
+	
 }
+
 function rvb2hex(val){
 if (val.indexOf("rgb") >= 0) {
 var rgb_string = val.slice(val.indexOf('(') + 1,val.indexOf(')'));
@@ -188,7 +185,7 @@ function colorer(col){
 		//alert(s);
 		Nombre=parseInt(s);
 		M=Nombre*Vcar3;
-		alert(M);
+		//alert(M);
 		Res=M.toString();
 		//alert(Res);
 		if((Res>1000)&&(Res<1000000)){
@@ -221,14 +218,12 @@ function refresh()
 </script>
 </head>
 <body onload="init()" role="application">
+	
 <section role="region" class="skin-dark" >
     <header>
     <a href="home.html"><span class="icon icon-back">back</span></a>
-      <h1>Code Color Resistance<em>(4 anneaux)</em></h1>
+      <h1 align="center">4 anneaux</h1>
 
-    </header>
-    <header>
-      <h3>Color To Code</h3>
     </header>
   </section>
 
@@ -290,33 +285,49 @@ function roundRect(x, y, w, h, radius)
 }
 roundRect(5,5,180,40, 15);
 </script>
+		<div height="50px">
+	<div id="car1" onclick="verif('car1')">	
+	
+	</div>
+	
+	<div id="car2" onclick="verif('car2')">	
+	
+	</div>
+	
+	
+	<div id="car3" onclick="verif('car3')">	
+	
+	</div>
+	
+	
+	<div id="car4" onclick="verif('car4')">
+	</div>
 		
-	<div id="car1" ></div>	
-	<div id="car2"></div>	
-	<div id="car3"></div>	
-	<div id="car4"></div>
+	</div>
+	
+	
 
 <form name="form1" id="forme1">
-	<label>
+	<!-- <label>
 	
-	<input data-type="switch"  type="checkbox" id="etat" value="car1" name="etat" onclick="verif()" checked>
-	<span></span>
+	<input name="example"  type="radio" id="etat" value="car1" checked>
+	<span>S1</span>
 	</label>
 	<label>
 	
-	<input data-type="switch"  type="checkbox" id="etat" value="car2" name="etat" onclick="verif()">
-	<span></span>
+	<input name="example" type="radio" id="etat" value="car2"  >
+	<span>S2</span>
 	</label>
 	<label>
 	
-	<input data-type="switch"  type="checkbox" id="etat" value="car3" name="etat" onclick="verif()">
-	<span></span>
+	<input name="example" type="radio" id="etat" value="car3"  >
+	<span>S3</span>
 	</label>
 	<label>
 	
-	<input data-type="switch"  type="checkbox" id="etat" value="car4" name="etat" onclick="verif()">
-	<span></span>
-	</label>
+	<input name="example" type="radio" id="etat" value="car4"  >
+	<span>S4</span>
+	</label> -->
 </form>
 </div>
 <div id="resultat">
@@ -335,6 +346,8 @@ roundRect(5,5,180,40, 15);
 	</select>
 </div>
 </div>
+</div>
+
 <div role="toolbar">
     <ul>
       <a href="resistance.html"><li style="margin-top: 11px;font-size: 17px;color: white;">Code To Color</li></a>
