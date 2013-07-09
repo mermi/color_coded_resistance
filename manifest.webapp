@@ -1,0 +1,17 @@
+{
+  "name": "Resistance",
+  "description": "...",
+  "launch_path": "/home.html",
+  "developer": {
+    "name": "Mermi",
+    "url": "https://github.com/Mermi"
+  },
+  "locales": {
+    "en-US": {
+      "name": "AppResistance",
+      "description": "AppResistance"
+    }
+  },
+  "default_locale": "en-US",
+  "orientation": "portrait-primary"
+}

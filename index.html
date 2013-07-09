@@ -72,42 +72,52 @@
 	window.document.getElementById('tolerance').display = "none";
 	window.document.getElementById('calc').value = "0000";
 }
-	function verif(cel){
-	if(document.getElementById(cel) == car1)
+	function verif(){
+	if(document.form1.etat[0].checked)
 	{
 		window.document.getElementById('container2').style.display = "block";
 		window.document.getElementById('tolerance').style.display = "none";
 		//d=document.form1.etat[0].value;
 			//alert(d);
 	}
-	else if(document.getElementById(cel) == car2)
+	else if(document.form1.etat[1].checked)
 	{
 		window.document.getElementById('container2').style.display = "block";
 		window.document.getElementById('tolerance').style.display = "none";
 		//d=document.getElementById('car1')
 		//alert(d);
-
 	}
-	else if(document.getElementById(cel) == car3)
+	else if(document.form1.etat[2].checked)
 	{
 		window.document.getElementById('container2').style.display = "block";
 		window.document.getElementById('tolerance').style.display = "none";
 		//d=document.form1.etat[2].value;
 		//alert(d);
-
 	}
-	else if(document.getElementById(cel) == car4)
+	else if(document.form1.etat[3].checked)
 	{
 		window.document.getElementById('container2').style.display = "none";
 		window.document.getElementById('tolerance').style.display = "block";
 		//d=document.form1.etat[3].value;
 		//alert(d);
 	}
+	
 }
 	function couleur(name){
 	//alert(name);
 
-		window.document.getElementById('car1').style.backgroundColor = name;
+		if(document.form1.etat[0].checked)
+	{
+	window.document.getElementById('car1').style.backgroundColor = name;
+}
+	else if (document.form1.etat[1].checked)
+	{
+		window.document.getElementById('car2').style.backgroundColor = name;
+	}
+	else if (document.form1.etat[2].checked)
+	{
+		window.document.getElementById('car3').style.backgroundColor = name;
+	}
 	
 }
 
@@ -286,21 +296,21 @@ function roundRect(x, y, w, h, radius)
 roundRect(5,5,180,40, 15);
 </script>
 		<div height="50px">
-	<div id="car1" onclick="verif('car1')">	
+	<div id="car1">	
 	
 	</div>
 	
-	<div id="car2" onclick="verif('car2')">	
-	
-	</div>
-	
-	
-	<div id="car3" onclick="verif('car3')">	
+	<div id="car2">	
 	
 	</div>
 	
 	
-	<div id="car4" onclick="verif('car4')">
+	<div id="car3">	
+	
+	</div>
+	
+	
+	<div id="car4">
 	</div>
 		
 	</div>
@@ -308,26 +318,26 @@ roundRect(5,5,180,40, 15);
 	
 
 <form name="form1" id="forme1">
-	<!-- <label>
+	<label>
 	
-	<input name="example"  type="radio" id="etat" value="car1" checked>
+	<input name="example"  type="radio" id="etat" value="car1" onclick="verif()" checked>
 	<span>S1</span>
 	</label>
 	<label>
 	
-	<input name="example" type="radio" id="etat" value="car2"  >
+	<input name="example" type="radio" id="etat" value="car2" onclick="verif()"  >
 	<span>S2</span>
 	</label>
 	<label>
 	
-	<input name="example" type="radio" id="etat" value="car3"  >
+	<input name="example" type="radio" id="etat" value="car3" onclick="verif()"  >
 	<span>S3</span>
 	</label>
 	<label>
 	
-	<input name="example" type="radio" id="etat" value="car4"  >
+	<input name="example" type="radio" id="etat" value="car4" onclick="verif()"  >
 	<span>S4</span>
-	</label> -->
+	</label>
 </form>
 </div>
 <div id="resultat">
